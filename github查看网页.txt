@@ -1,0 +1,10 @@
+1. 将文件上传到github，然后在该文件到全路径加（https://htmlpreview.github.io/?）
+  只需在上传的html代码页面的网址前加上“https://htmlpreview.github.io/?”即可，
+
+    如：
+
+    https://github.com/fangfay/baidu/blob/master/xiaowei/03/index.html
+
+    加上代码后是：
+
+https://htmlpreview.github.io/?https://github.com/fangfay/baidu/blob/master/xiaowei/03/index.html
