@@ -1,4 +1,5 @@
-原文连接: (React-Native学习笔记——技术栈及简介)[https://blog.csdn.net/u012455070/article/details/79030859]
+原文连接:
+[React-Native学习笔记——技术栈及简介](https://blog.csdn.net/u012455070/article/details/79030859)
 
 推荐的技术栈顺序清单
 1、阮一峰es6： http://es6.ruanyifeng.com/  
