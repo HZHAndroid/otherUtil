@@ -1,3 +1,5 @@
+原文连接: (React-Native学习笔记——技术栈及简介)[https://blog.csdn.net/u012455070/article/details/79030859]
+
 推荐的技术栈顺序清单
 1、阮一峰es6： http://es6.ruanyifeng.com/  
 es6中的新特性是后续内容的基础，重点内容有let关键字、解构赋值、构造函数和原型链、Promise对象、yield关键字、Generator函数、aysnc/await等
