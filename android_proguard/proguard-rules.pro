@@ -316,3 +316,15 @@
 ###---------------SuppressFBWarnings 混淆配置start ----------
 -dontwarn edu.umd.cs.findbugs.annotations.SuppressFBWarnings
 ###---------------SuppressFBWarnings 混淆配置end ----------
+
+###---------------simple-xml-core.jar 混淆配置start ----------
+# simple-xml-core的SDK
+-keep class org.simpleframework.xml.** {*;}
+-dontwarn org.simpleframework.xml.**
+###---------------simple-xml-core.jar 混淆配置end ----------
+
+###---------------acra-4.5.0.jar 混淆配置start ----------
+# acra的 SDK
+-keep class org.acra.** {*;}
+-dontwarn org.acra.**
+###---------------acra-4.5.0.jar 混淆配置end ----------
