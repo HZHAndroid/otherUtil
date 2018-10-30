@@ -1,0 +1,92 @@
+// app 的版本和依赖包版本配置文件
+ext {
+    android = [
+            compile_sdk_version: 28,
+            build_tools_version: '28.0.3',
+            min_sdk_version    : 16,
+            target_sdk_version : 28,
+    ]
+
+    dependencies = [
+            // 测试相关的依赖库
+            junit                : 'junit:junit:4.12',
+            //runner               : 'com.android.support.test:runner:1.0.2',
+            //espresso             : 'com.android.support.test.espresso:espresso-core:3.0.2',
+
+            runner               : 'androidx.test:runner:1.1.0',
+            espresso             : 'androidx.test.espresso:espresso-core:3.1.0',
+
+            // 系统依赖库
+            support_v7           : 'com.android.support:appcompat-v7:28.0.0-alpha3',
+            //support_v4           : 'com.android.support:support-v4:28.0.0-alpha3',
+            support_v4           : 'androidx.legacy:legacy-support-v4:1.0.0',
+            support_constraint   : 'com.android.support.constraint:constraint-layout:1.1.3',
+            // androidx 替代 support
+            androidx_appcompat   : 'androidx.appcompat:appcompat:1.0.0',
+            // constraintlayout
+            constraintlayout     : 'androidx.constraintlayout:constraintlayout:2.0.0-alpha2',
+            // com.android.support:design:28.0.2 -> com.google.android.material:material:1.0.0
+            material             : 'com.google.android.material:material:1.0.0',
+
+            // 第三方依赖库
+//            kerkee            : 'com.kercer:kerkee:1.3.26',
+            gson                 : 'com.google.code.gson:gson:2.8.5',
+            // zip 压缩解压 https://github.com/imasm/Android-Zip4j
+            zip4j                : 'net.lingala.zip4j:zip4j:1.3.2',
+            // 辅助开发依赖库
+
+            // 网路库 retrofit2 https://github.com/square/retrofit
+            //"okhttp3"                       : 'com.squareup.okhttp3:okhttp:3.9.0',//retrofit2包含okhttp
+            retrofit2            : 'com.squareup.retrofit2:retrofit:2.3.0',
+            converter_gson       : 'com.squareup.retrofit2:converter-gson:2.3.0',
+            adapter_rxjava2      : 'com.squareup.retrofit2:adapter-rxjava2:2.3.0',
+            // okhttp3 的cookie管理， https://github.com/franmontiel/PersistentCookieJar
+            PersistentCookieJar  : 'com.github.franmontiel:PersistentCookieJar:v1.0.1',
+//            "rxjava2:rxandroid"              : 'io.reactivex.rxjava2:rxandroid:2.0.1',// 其他库有引入
+//            "rxjava2"                        : 'io.reactivex.rxjava2:rxjava:2.1.5',// 其他库有引入
+
+            // 下载文件相关库 https://github.com/lingochamp/okdownload
+            // core
+            okdownload           : 'com.liulishuo.okdownload:okdownload:1.0.4',
+            // provide sqlite to store breakpoints
+            okdownload_sqlite    : 'com.liulishuo.okdownload:sqlite:1.0.4',
+            // provide okhttp to connect to backend
+            // and then please import okhttp dependencies by yourself
+            okdownload_okhttp    : 'com.liulishuo.okdownload:okhttp:1.0.4',
+            // 数字进度条 https://github.com/daimajia/NumberProgressBar
+            numberprogressbar    : 'com.daimajia.numberprogressbar:library:1.4@aar',
+            // okhttp, okdownload的依赖库 https://github.com/lingochamp/okdownload/wiki  https://github.com/square/okhttp
+            okhttp               : 'com.squareup.okhttp3:okhttp:3.11.0',
+
+            // GalleryFinal图片库, https://github.com/pengjianbo/GalleryFinal
+            galleryfinal         : 'cn.finalteam:galleryfinal:1.4.8.7',
+
+            // SweetAlert 弹出框库 https://github.com/pedant/sweet-alert-dialog
+            sweetalert_library   : 'com.github.f0ris.sweetalert:library:1.5.1',
+            // rxpermissions权限管理， https://github.com/tbruyelle/RxPermissions/
+            rxpermissions        : 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.3@aar',
+            // rxpermissions权限管理的依赖
+            rxjava2_rxandroid    : 'io.reactivex.rxjava2:rxandroid:2.0.1',
+            // rxpermissions权限管理的依赖
+            rxjava2_rxjava       : 'io.reactivex.rxjava2:rxjava:2.0.5',
+
+            // 沉浸式库 https://github.com/gyf-dev/ImmersionBar
+            immersionbar         : 'com.gyf.immersionbar:immersionbar:2.3.2-beta01',
+
+            // 下拉刷新，上拉加载更多库 https://github.com/scwang90/SmartRefreshLayout
+            SmartRefreshLayout   : 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-14',
+            // 下拉刷新，上拉加载更多头部库
+            SmartRefreshHeader   : 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-14',//没有使用特殊Header，可以不加这行
+            // appcompat_v7: 'com.android.support:appcompat-v7:25.3.1',//版本 23以上（必须）,因为上面有引用，所以可以忽略
+
+            // 底部导航库 https://github.com/Ashok-Varma/BottomNavigation, https://blog.csdn.net/abs1004/article/details/77330726
+            bottom_navigation_bar: 'com.ashokvarma.android:bottom-navigation-bar:2.0.5',
+
+            // 日志库，https://blog.csdn.net/yangjingxi0910/article/details/51435503
+            orhanobut_logger     : 'com.github.orhanobut:logger:1.12',
+            // Android工具类合集 , https://www.jianshu.com/p/677856023d0c , https://github.com/Blankj/AndroidUtilCode
+            utilcode             : 'com.blankj:utilcode:1.21.2',
+            // 弹出框库 https://github.com/afollestad/material-dialogs#basics
+            material_dialogs_core: 'com.afollestad.material-dialogs:core:2.0.0-beta4'
+    ]
+}
