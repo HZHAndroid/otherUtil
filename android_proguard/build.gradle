@@ -1,0 +1,92 @@
+apply plugin: 'com.android.library'
+
+// app 配置
+def appConfig = rootProject.ext.android
+// 依赖包 配置
+def librarys = rootProject.ext.dependencies
+
+android {
+    compileSdkVersion appConfig.compile_sdk_version
+
+
+
+    defaultConfig {
+        minSdkVersion appConfig.min_sdk_version
+        targetSdkVersion appConfig.target_sdk_version
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    // 导入xml解析jar
+//    implementation files('libs/simple-xml-core.jar')
+    // 安卓崩溃信息收集框架ACRA , https://blog.csdn.net/wgyscsf/article/details/54314899
+//    implementation files('libs/acra-4.5.0.jar')
+
+    // 系统的依赖库
+    implementation librarys.androidx_appcompat
+    // 测试相关的依赖库
+    testImplementation librarys.junit
+    androidTestImplementation librarys.runner
+    androidTestImplementation librarys.espresso
+
+    // material 库
+    api librarys.material
+
+    // 第三方的依赖库
+    //    api librarys.kerkee
+    api librarys.gson
+    // zip4j
+    api librarys.zip4j
+    // 网络相关库
+    api librarys.retrofit2
+    api librarys.converter_gson
+    api librarys.adapter_rxjava2
+    api librarys.PersistentCookieJar
+    // 下载文件相关库
+    api librarys.okdownload
+    api librarys.okdownload_sqlite
+    api librarys.okdownload_okhttp
+    // 数字进度条
+    api librarys.numberprogressbar
+    // okhttp3
+    api librarys.okhttp
+    // SweetAlert 弹出框库 https://github.com/pedant/sweet-alert-dialog
+    api librarys.sweetalert_library
+    // GalleryFinal图片库
+    api librarys.galleryfinal
+    // v4包
+    api librarys.support_v4
+    // 权限管理
+    api librarys.rxpermissions
+    api librarys.rxjava2_rxandroid
+    api librarys.rxjava2_rxjava
+    // 沉浸式库
+    api librarys.immersionbar
+    // 上下刷新，下拉加载更多库
+    api librarys.SmartRefreshLayout
+    // 上下刷新，下拉加载更多头部库
+    api librarys.SmartRefreshHeader
+    // 底部导航库
+    api librarys.bottom_navigation_bar
+    // 日志库
+    api librarys.orhanobut_logger
+    // Android工具类集合
+    api librarys.utilcode
+    // 弹出框库
+    api librarys.material_dialogs_core
+
+}
